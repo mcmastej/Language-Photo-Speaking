@@ -1,89 +1,17 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#111827">
-<title>사진으로 한국어 말하기</title>
+<meta name="theme-color" content="#111c2d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>한국어 말하기</title>
 <link rel="manifest" href="manifest.webmanifest">
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f5f5f5;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}
-main{max-width:600px;margin:auto;padding:20px 16px 32px}.card{background:white;border-radius:20px;padding:16px;box-shadow:0 4px 20px #00000012}
-h1{font-size:24px;margin:4px 0 18px}.photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:#e5e7eb}
-.prompt{font-size:19px;font-weight:600;margin:18px 2px 8px}.hint{font-size:14px;color:#6b7280;margin:0 2px 16px}
-.controls{display:flex;gap:10px}.btn{border:0;border-radius:14px;padding:14px 16px;font-size:16px;font-weight:700;cursor:pointer}.record{flex:1;background:#111827;color:white}.next{background:#e5e7eb;color:#111827}
-.btn:disabled{opacity:.5}.status{min-height:24px;margin:14px 2px 8px;color:#6b7280;font-size:14px}
-.transcript{min-height:120px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:14px;padding:14px;line-height:1.7;font-size:17px}
-.small{font-size:12px;color:#9ca3af;margin-top:12px}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <div class="card">
-    <h1>사진으로 한국어 말하기</h1>
-    <img id="photo" class="photo" alt="한국어 말하기 사진">
-    <p id="prompt" class="prompt"></p>
-    <p class="hint">사진을 보면서 한국어로 자유롭게 설명해 보세요.</p>
-    <div class="controls">
-      <button id="record" class="btn record">🎙 말하기 시작</button>
-      <button id="next" class="btn next">다음 사진</button>
-    </div>
-    <div id="status" class="status">마이크 버튼을 눌러 시작하세요.</div>
-    <div id="transcript" class="transcript">여기에 한국어 음성 인식 결과가 표시됩니다.</div>
-    <div class="small">처음에는 Chrome 또는 Safari에서 사용하세요. 브라우저가 음성 인식을 지원하지 않으면 전사 기능을 사용할 수 없습니다.</div>
-  </div>
-</main>
-<script>
-const prompts=[
-  {image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80", text:"이 사진에 무엇이 보이는지 한국어로 설명해 보세요."},
-  {image:"https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80", text:"이 장소를 한국어로 자세히 묘사해 보세요."},
-  {image:"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80", text:"사람들이 무엇을 하고 있는지 한국어로 설명해 보세요."},
-  {image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80", text:"사진 속 장면을 한국어로 묘사하고 어떤 상황인지 추측해 보세요."},
-  {image:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80", text:"사진에서 볼 수 있는 것들을 가능한 한 많이 한국어로 말해 보세요."}
-];
-let index=0, recognition=null, listening=false;
-
-const photo=document.getElementById("photo"), prompt=document.getElementById("prompt");
-const record=document.getElementById("record"), next=document.getElementById("next");
-const status=document.getElementById("status"), transcript=document.getElementById("transcript");
-
-function show(){
-  const p=prompts[index];
-  photo.src=p.image; prompt.textContent=p.text;
-  transcript.textContent="여기에 한국어 음성 인식 결과가 표시됩니다.";
-  status.textContent="마이크 버튼을 눌러 시작하세요.";
-}
-show();
-
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-if(SR){
-  recognition=new SR();
-  recognition.lang="ko-KR"; recognition.continuous=true; recognition.interimResults=true;
-  recognition.onstart=()=>{listening=true;record.textContent="■ 말하기 중지";status.textContent="듣고 있습니다…";};
-  recognition.onend=()=>{listening=false;record.textContent="🎙 말하기 시작";if(status.textContent==="듣고 있습니다…")status.textContent="음성 인식이 끝났습니다.";};
-  recognition.onerror=e=>{status.textContent="음성 인식 오류: "+e.error; listening=false;record.textContent="🎙 말하기 시작";};
-  recognition.onresult=e=>{
-    let finalText="", interim="";
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      const t=e.results[i][0].transcript;
-      e.results[i].isFinal ? finalText+=t+" " : interim+=t;
-    }
-    const old=transcript.dataset.final||"";
-    if(finalText){transcript.dataset.final=old+finalText;}
-    transcript.textContent=(transcript.dataset.final||"")+interim;
-  };
-  record.onclick=()=>{
-    if(listening) recognition.stop();
-    else {transcript.dataset.final="";transcript.textContent="";recognition.start();}
-  };
-}else{
-  record.disabled=true;
-  status.textContent="이 브라우저에서는 음성 인식을 지원하지 않습니다.";
-}
-next.onclick=()=>{
-  if(listening) recognition.stop();
-  index=(index+1)%prompts.length; show();
-};
-</script>
+<div id="app"></div>
+<script src="app.js"></script>
 </body>
 </html>
