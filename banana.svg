@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">바나나</text><path d="M210 185 C300 405 500 445 610 225 C570 395 380 500 240 360 C205 325 190 260 210 185Z" fill="#f6c945"/>
+        <path d="M205 185 C210 165 230 155 250 160" stroke="#8d6e00" stroke-width="18" stroke-linecap="round"/>
+        <path d="M600 225 C620 205 630 185 625 165" stroke="#8d6e00" stroke-width="18" stroke-linecap="round"/></svg>

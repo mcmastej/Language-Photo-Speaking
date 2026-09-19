@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">딸기</text><path d="M400 130 L445 175 L500 165 L485 220 C470 335 400 410 400 410 C400 410 330 335 315 220 L300 165 L355 175Z" fill="#ef476f"/>
+        <path d="M400 145 Q350 85 315 125 Q360 135 400 165 Q440 135 485 125 Q450 85 400 145Z" fill="#2f855a"/>
+        <g fill="#ffd166"><ellipse cx="355" cy="225" rx="6" ry="10"/><ellipse cx="400" cy="245" rx="6" ry="10"/><ellipse cx="445" cy="225" rx="6" ry="10"/><ellipse cx="375" cy="290" rx="6" ry="10"/><ellipse cx="425" cy="300" rx="6" ry="10"/><ellipse cx="400" cy="345" rx="6" ry="10"/></g></svg>

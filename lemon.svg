@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">레몬</text><path d="M270 300 C270 220 345 170 430 185 C520 200 570 270 530 345 C490 420 390 430 315 390 C280 370 265 335 270 300Z" fill="#ffd166"/>
+        <path d="M455 195 Q500 145 540 165 Q520 205 470 220" fill="#2f855a"/></svg>

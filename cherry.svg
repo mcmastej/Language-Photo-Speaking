@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">체리</text><path d="M400 180 C350 110 300 105 270 125" fill="none" stroke="#2f855a" stroke-width="14" stroke-linecap="round"/>
+        <path d="M400 180 C445 105 500 105 530 125" fill="none" stroke="#2f855a" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="285" cy="320" r="95" fill="#d62839"/><circle cx="515" cy="320" r="95" fill="#d62839"/>
+        <path d="M285 230 Q330 155 400 180" fill="none" stroke="#5b3a29" stroke-width="10"/>
+        <path d="M515 230 Q470 155 400 180" fill="none" stroke="#5b3a29" stroke-width="10"/></svg>

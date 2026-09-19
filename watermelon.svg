@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">수박</text><path d="M170 250 Q400 480 630 250 A230 230 0 0 0 170 250Z" fill="#e63946"/>
+        <path d="M155 245 Q400 485 645 245" fill="none" stroke="#2f855a" stroke-width="45"/>
+        <ellipse cx="300" cy="310" rx="10" ry="20" fill="#111827"/><ellipse cx="360" cy="350" rx="10" ry="20" fill="#111827"/>
+        <ellipse cx="430" cy="355" rx="10" ry="20" fill="#111827"/><ellipse cx="495" cy="315" rx="10" ry="20" fill="#111827"/></svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">오렌지</text><circle cx="400" cy="285" r="145" fill="#f77f00"/><ellipse cx="355" cy="235" rx="65" ry="85" fill="#ffb347" opacity=".35"/>
+        <path d="M400 145 Q440 105 490 120 Q470 160 420 170" fill="#2f855a"/></svg>

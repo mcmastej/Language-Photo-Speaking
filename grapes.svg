@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">포도</text><path d="M400 145 Q360 105 325 115 Q355 155 400 170" fill="none" stroke="#2f855a" stroke-width="18" stroke-linecap="round"/>
+        <g fill="#7b2cbf">
+        <circle cx="330" cy="220" r="48"/><circle cx="400" cy="220" r="48"/><circle cx="470" cy="220" r="48"/>
+        <circle cx="365" cy="285" r="48"/><circle cx="435" cy="285" r="48"/>
+        <circle cx="400" cy="350" r="48"/></g></svg>

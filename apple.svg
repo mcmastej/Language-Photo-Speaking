@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">사과</text><path d="M400 190 C335 130 245 185 250 285 C255 395 335 440 400 440 C465 440 545 395 550 285 C555 185 465 130 400 190Z" fill="#e63946"/>
+        <path d="M395 185 C410 120 470 90 520 105 C500 150 455 180 395 185Z" fill="#2f855a"/>
+        <path d="M402 172 C375 120 345 92 315 82" fill="none" stroke="#6b4f2a" stroke-width="16" stroke-linecap="round"/>
+        <ellipse cx="365" cy="245" rx="32" ry="65" fill="#ff6b6b" opacity=".25"/></svg>

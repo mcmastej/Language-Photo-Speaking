@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <rect width="800" height="560" rx="28" fill="#fff"/>
+      <text x="400" y="510" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+            font-size="38" font-weight="700" fill="#111827">망고</text><path d="M470 145 C600 175 575 360 455 425 C340 485 245 405 280 285 C315 165 385 125 470 145Z" fill="#ffb703"/>
+        <path d="M450 155 Q490 90 540 105 Q520 150 470 175" fill="#2f855a"/>
+        <ellipse cx="365" cy="265" rx="55" ry="85" fill="#ffd166" opacity=".35"/></svg>
