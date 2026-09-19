@@ -137,7 +137,7 @@ function renderCard() {
 
       <article class="practice-card">
         <div class="image-frame">
-          <img src="images/${c.image}.svg" alt="${c.answer}">
+          <img src="images/${c.image}.png" alt="${c.answer}">
         </div>
         <div class="question">
           <div class="english">${c.en}</div>
@@ -263,8 +263,7 @@ function checkAnswer() {
 }
 
 function nextCard() {
-  // Correct cards are removed; incorrect cards were already moved to the end.
-  if (!state.wrong) state.queue.shift();
+  // Correct cards are already removed; incorrect cards are already at the end.
   renderCard();
 }
 
